@@ -13,13 +13,17 @@ class APIRequester {
 
     const requestURL = `https://www.googleapis.com/books/v1/volumes?q=${title}&maxResults=${numberOfBooks}&startIndex=${index}`;
 
-    const {
-      data: { items },
-    } = await axios.get(requestURL, {
-      cancelToken: this.cancelRequest.token,
-    });
+    try {
+      const {
+        data: { items },
+      } = await axios.get(requestURL, {
+        cancelToken: this.cancelRequest.token,
+      });
 
-    return items;
+      return items;
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
