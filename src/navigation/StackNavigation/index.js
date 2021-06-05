@@ -2,6 +2,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import TabNavigation from "../TabNavigation";
 import uuid from "react-native-uuid";
+import BookDetails from "../../pages/BookDetails";
 
 const Stack = createStackNavigator();
 
@@ -9,6 +10,10 @@ const stackRoutes = [
   {
     name: "TabStack",
     component: TabNavigation,
+  },
+  {
+    name: "BookDetails",
+    component: BookDetails,
   },
 ];
 

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles";
 
 import book_placeholder from "../../../assets/images/book-placeholder-small.png";
 
-const Book = ({ book }) => {
+const Book = ({ book, navigation }) => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [thumbnail, setThumbnail] = useState("");
@@ -25,19 +25,35 @@ const Book = ({ book }) => {
     }
   };
 
+  const showDetails = () => {
+    navigation.navigate("BookDetails", { book });
+  };
+
   return (
     <View style={styles.container}>
       {thumbnail ? (
-        <View style={styles.shadow}>
+        <TouchableOpacity
+          onPress={showDetails}
+          activeOpacity={0.8}
+          style={styles.shadow}
+        >
           <Image style={styles.image} source={{ uri: thumbnail }} />
-        </View>
+        </TouchableOpacity>
       ) : (
-        <View style={styles.shadow}>
+        <TouchableOpacity
+          onPress={showDetails}
+          activeOpacity={0.8}
+          style={styles.shadow}
+        >
           <Image style={styles.image} source={book_placeholder} />
-        </View>
+        </TouchableOpacity>
       )}
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.author}>by {author}</Text>
+      <Text numberOfLines={2} style={styles.title}>
+        {title}
+      </Text>
+      <Text numberOfLines={1} style={styles.author}>
+        by {author}
+      </Text>
     </View>
   );
 };

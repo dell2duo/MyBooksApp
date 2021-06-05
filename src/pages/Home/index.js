@@ -13,7 +13,7 @@ import api from "../../services/APIRequester";
 import BookList from "../../components/BookList";
 import HomeContent from "../../components/HomeContent";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const [bookTitle, setBookTitle] = useState();
   const [books, setBooks] = useState(null);
 
@@ -55,7 +55,11 @@ const Home = () => {
     >
       <View style={styles.container}>
         <SearchBar value={bookTitle} onChangeText={setBookTitle} />
-        {books ? <BookList books={books} /> : <HomeContent />}
+        {books ? (
+          <BookList navigation={navigation} books={books} />
+        ) : (
+          <HomeContent />
+        )}
       </View>
     </ScrollView>
     // </TouchableWithoutFeedback>

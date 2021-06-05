@@ -4,7 +4,7 @@ import uuid from "react-native-uuid";
 
 import Book from "./Book";
 
-const BookList = ({ books }) => {
+const BookList = ({ books, navigation }) => {
   const [parsedBooks, setParsedBooks] = useState([]);
 
   useEffect(() => {
@@ -33,9 +33,9 @@ const BookList = ({ books }) => {
       }}
     >
       {parsedBooks.map((column) => (
-        <View style={{ flexDirection: "row" }}>
+        <View key={uuid.v4()} style={{ flexDirection: "row" }}>
           {column.map((book) => (
-            <Book book={book} />
+            <Book navigation={navigation} key={uuid.v4()} book={book} />
           ))}
         </View>
       ))}
