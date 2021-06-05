@@ -23,4 +23,8 @@ export const styles = StyleSheet.create({
     marginLeft: 10,
     color: "#000",
   },
+  cleanButton: {
+    height: 25,
+    width: 25,
+  },
 });
