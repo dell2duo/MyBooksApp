@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 15,
+    marginRight: 20,
+    marginLeft: 20,
   },
   title: {
     color: colors.darkGray,

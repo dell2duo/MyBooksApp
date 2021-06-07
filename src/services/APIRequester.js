@@ -21,9 +21,7 @@ class APIRequester {
       });
 
       return items;
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }
 }
 

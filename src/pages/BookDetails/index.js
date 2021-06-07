@@ -14,7 +14,6 @@ const BookDetails = ({
   },
   navigation,
 }) => {
-  // console.log("book object", book);
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [author, setAuthor] = useState("");

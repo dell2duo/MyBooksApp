@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import DiscoverBooks from "./DiscoverBooks";
 import { styles } from "./styles";
 
-const HomeContent = () => {
+const HomeContent = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.name}>
@@ -11,7 +11,7 @@ const HomeContent = () => {
         👋
       </Text>
 
-      <DiscoverBooks />
+      <DiscoverBooks navigation={navigation} />
       {/* <CurrentReading /> */}
       {/* <DailyReviews /> */}
     </View>

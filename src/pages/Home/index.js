@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Keyboard,
-  ScrollView,
-  Text,
-  TouchableWithoutFeedback,
-  View,
-} from "react-native";
+import { ScrollView, View } from "react-native";
 import SearchBar from "../../components/SearchBar";
 import { styles } from "./styles";
 
@@ -18,7 +12,6 @@ const Home = ({ navigation }) => {
   const [books, setBooks] = useState(null);
 
   useEffect(() => {
-    console.log(bookTitle);
     if (!bookTitle) {
       setBooks(null);
     } else getBooks();
@@ -47,13 +40,13 @@ const Home = ({ navigation }) => {
   };
 
   return (
-    // <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
     <View style={styles.container}>
       <ScrollView
         onScroll={({ nativeEvent }) => {
           if (isCloseToBottom(nativeEvent)) {
           }
         }}
+        showsVerticalScrollIndicator={false}
       >
         <SearchBar
           value={bookTitle}
@@ -64,11 +57,10 @@ const Home = ({ navigation }) => {
         {books ? (
           <BookList navigation={navigation} books={books} />
         ) : (
-          <HomeContent />
+          <HomeContent navigation={navigation} />
         )}
       </ScrollView>
     </View>
-    // </TouchableWithoutFeedback>
   );
 };
 

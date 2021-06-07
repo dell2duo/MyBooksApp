@@ -11,6 +11,8 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontFamily: "sfpro-display-medium",
     color: "#54565A",
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   nameRed: {
     fontSize: 24,

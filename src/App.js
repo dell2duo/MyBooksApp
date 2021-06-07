@@ -3,6 +3,7 @@ import React from "react";
 import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
 import { Roboto_900Black } from "@expo-google-fonts/roboto";
+import { PlayfairDisplay_700Bold } from "@expo-google-fonts/playfair-display";
 
 import Routes from "./Routes";
 
@@ -11,6 +12,7 @@ export default function App() {
     "sfpro-display-medium": require("./assets/fonts/SFPro/SF-Pro-Display-Medium.otf"),
     "sfpro-text-medium": require("./assets/fonts/SFPro/SF-Pro-Text-Medium.otf"),
     Roboto_900Black,
+    PlayfairDisplay_700Bold,
   });
 
   if (!fontsLoaded) {

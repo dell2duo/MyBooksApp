@@ -47,7 +47,6 @@ const TabNavigation = () => {
       sceneContainerStyle={{ backgroundColor: "transparent" }}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          console.log(size);
           switch (route.name) {
             case "Home":
               return <HomeIcon stroke={color} height={size} width={size} />;
