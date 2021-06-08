@@ -5,8 +5,6 @@ import { styles } from "./styles";
 import Numbers from "../../../assets/icons/numbers.svg";
 
 const BookCard = ({ item, index }) => {
-  console.log(item, index);
-
   return (
     <TouchableOpacity
       activeOpacity={0.9}

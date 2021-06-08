@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { FlatList, ScrollView, View } from "react-native";
+import React, { memo, useEffect, useState } from "react";
+import { View } from "react-native";
 import uuid from "react-native-uuid";
 
 import Book from "./Book";
@@ -30,6 +30,7 @@ const BookList = ({ books, navigation }) => {
         alignItems: "center",
         marginTop: 40,
         backgroundColor: "transparent",
+        marginBottom: 60,
       }}
     >
       {parsedBooks.map((column) => (
@@ -43,4 +44,4 @@ const BookList = ({ books, navigation }) => {
   );
 };
 
-export default BookList;
+export default memo(BookList);
