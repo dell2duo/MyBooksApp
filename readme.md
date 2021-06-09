@@ -25,3 +25,12 @@ After expo start, you can type `a` on your terminal to open your emulator, or re
 You can also run your APP in the React Native Vanilla version, just type `yarn android` or `yarn ios`.
 
 Now you're set to run MyBooksApp by yourself!
+
+## Check out some pictures!
+
+- Home
+  ![Home](./appImages/home.png)
+- Searching for books with Google Books API
+  ![Search](./appImages/search.png)
+- Details from the book
+  ![Details](./appImages/details.png)
