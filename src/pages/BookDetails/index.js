@@ -14,6 +14,7 @@ const BookDetails = ({
   },
   navigation,
 }) => {
+  console.log(book);
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -84,7 +85,7 @@ const BookDetails = ({
           ))}
         </View>
       </ScrollView>
-      <BottomBar />
+      <BottomBar book={book} />
     </View>
   );
 };

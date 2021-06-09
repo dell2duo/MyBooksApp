@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
+import CurrentReading from "./CurrentReading";
 import DiscoverBooks from "./DiscoverBooks";
 import { styles } from "./styles";
 
@@ -12,7 +13,7 @@ const HomeContent = ({ navigation }) => {
       </Text>
 
       <DiscoverBooks navigation={navigation} />
-      {/* <CurrentReading /> */}
+      <CurrentReading navigation={navigation} />
       {/* <DailyReviews /> */}
     </View>
   );
